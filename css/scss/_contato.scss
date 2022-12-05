@@ -1,0 +1,74 @@
+.contato{
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @include d(s){
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contato form{
+  label{
+    @include type-1(18);
+    display: block;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea{
+    @include type-1(18);
+    color: $secondary-color;
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    border: 2px solid $dark-color;
+    background: transparent;
+    margin-bottom: 1em;
+    &:hover, &:focus{
+      outline: none;
+      border-color: $medium-color;
+    }
+  }
+  textarea{
+    height: 120px;
+  }
+}
+input.button{
+  @include type-1(18);
+  cursor: pointer;
+  color: $dark-color;
+  text-transform: uppercase;
+  border: 2px solid $dark-color;
+  background: transparent;
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  @include box-shadow(5px 5px 0 -2px $medium-color,
+                      5px 5px 0 0 $dark-color);
+  transition: .3s;
+  &:hover{
+    @include box-shadow(3px 3px 0 -2px $medium-color,
+                      3px 3px 0 0 $dark-color);
+  }
+}
+
+.contato-info{
+  display: inline-block;
+  color: $dark-color;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  @include d(l){
+    margin-top: -3em;
+    float: right;
+    text-align: right;
+  }
+}
+
+.contato-mapa{
+  display: block;
+  @include box-shadow(0 0 0 10px $medium-color);
+  clear: both;
+  img{
+    width: 100%;
+  }
+}
